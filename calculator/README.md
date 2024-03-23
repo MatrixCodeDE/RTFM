@@ -5,21 +5,21 @@ A series of rather easy CTFs
 ## Calculator 1 - VERY EASY
 
 An easy calculator with Python. It's hosted on our private server, but this shouldn't be a problem.\
-Of course, it's [open source](./calculator_1/calculator.py).
+Of course, it's [open source](./calculator1/files/challenge.py).
 
 ## Calculator 2 - VERY EASY
 
 We discovered, that our first version had some issues with the security and exploitability. This version should have fixed this.\
-[Source code](./calculator_2/calculator.py)
+[Source code](./calculator2/files/challenge.py)
 
 ## Calculator 3 - EASY
 
 Due to further security risks, we expanded the blacklist. Now our calculator should be completely safe.\
-[Source code](./calculator_3/calculator.py)
+[Source code](./calculator3/files/challenge.py)
 
 ## Usage & Dependencies
 
-The scripts are executed with Python. Tested with `Python >= 3.8`. No packages needed.
+The scripts are executed within seperate Docker containers. Therefore, the following ports are exposed:
 
 | Challenge    | Port |
 |--------------|------|

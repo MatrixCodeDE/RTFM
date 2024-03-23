@@ -1,3 +1,6 @@
 /venv/
 /.idea/
 .DS_Store
+/calculator/calculator1/challenge.yml
+/calculator/calculator2/challenge.yml
+/calculator/calculator3/challenge.yml
