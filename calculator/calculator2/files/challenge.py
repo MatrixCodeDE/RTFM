@@ -3,7 +3,7 @@ from socketserver import BaseRequestHandler, ThreadingTCPServer
 HOST = "0.0.0.0"
 PORT = 6002
 
-BLACKLIST = ["open", "read", "exec", "{", "}", "\\"]
+BLACKLIST = ["open", "read", "exec", "{", "}", "\\", "globals", "BLACKLIST"]
 
 
 def readuntil(sock, char):
