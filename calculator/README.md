@@ -21,8 +21,8 @@ Due to further security risks, we expanded the blacklist. Now our calculator sho
 
 The scripts are executed within seperate Docker containers. Therefore, the following ports are exposed:
 
-| Challenge    | Port |
-|--------------|------|
+|  Challenge   | Port |
+|:------------:|:----:|
 | Calculator 1 | 6001 |
 | Calculator 2 | 6002 |
 | Calculator 3 | 6003 |

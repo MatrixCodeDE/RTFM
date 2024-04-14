@@ -19,7 +19,7 @@ COPY files/flag.txt ./
 
 RUN chown root challenge.py && \
     chown root flag.txt && \
-    chmod +rx challenge.py && \
+    chmod +r challenge.py && \
     chmod +r flag.txt
 
 USER ctf

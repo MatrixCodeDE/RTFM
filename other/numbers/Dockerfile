@@ -1,6 +1,6 @@
 FROM python:3.11-alpine
 
-EXPOSE 6001
+EXPOSE 6004
 
 # Preparations
 RUN mkdir /ctf && \
