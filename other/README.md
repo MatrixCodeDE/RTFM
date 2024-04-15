@@ -13,4 +13,4 @@ The scripts are executed within seperate Docker containers. Therefore, the follo
 
 | Challenge | Port |
 |:---------:|:----:|
-|  Numbers  | 6004 |
+| Integers  | 6004 |
