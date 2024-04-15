@@ -2,10 +2,10 @@
 Other CTFs without their own category
 
 
-## Numbers - VERY EASY
+## Integers - VERY EASY
 
 You are given integers, give back integers with the same value but not the same length.\
-[Source code](./numbers/files/challenge.py)
+[Source code](integers/files/challenge.py)
 
 ## Usage & Dependencies
 
