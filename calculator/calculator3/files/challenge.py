@@ -40,7 +40,7 @@ class ThreadingTCPRequestHandler(BaseRequestHandler):
             self.request.sendall(b"Answer: " + str(answer).encode() + b'\n\n')
             self.loop()
         except Exception as e:
-            print(e)
+            #print(e)
             self.request.sendall(b"\nSorry, an error occurred.\n")
             self.loop()
 

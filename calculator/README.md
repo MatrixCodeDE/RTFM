@@ -17,6 +17,11 @@ We discovered, that our first version had some issues with the security and expl
 Due to further security risks, we expanded the blacklist. Now our calculator should be completely safe.\
 [Source code](./calculator3/files/challenge.py)
 
+## Calculator 4 - HARD
+
+The recent security patches weren't save, so we decided to remove all builtin functions of python. Anyways, you can use the math library.\
+[Source code](./calculator4/files/challenge.py)
+
 ## Usage & Dependencies
 
 The scripts are executed within seperate Docker containers. Therefore, the following ports are exposed:
@@ -26,6 +31,7 @@ The scripts are executed within seperate Docker containers. Therefore, the follo
 | Calculator 1 | 6001 |
 | Calculator 2 | 6002 |
 | Calculator 3 | 6003 |
+| Calculator 4 | 6004 |
 
 
 ## Credits

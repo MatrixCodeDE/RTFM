@@ -1,9 +1,8 @@
+import math
 from socketserver import BaseRequestHandler, ThreadingTCPServer
 
 HOST = "0.0.0.0"
-PORT = 6002
-
-BLACKLIST = ["open", "read", "exec", "{", "}", "\\", "globals", "BLACKLIST"]
+PORT = 6004
 
 
 def readuntil(sock, char):
@@ -21,7 +20,7 @@ class ThreadingTCPRequestHandler(BaseRequestHandler):
 
     def loop(self):
         self.request.settimeout(20)
-        self.request.sendall(b"\nYour expression: ")
+        self.request.sendall(b"Your expression:")
 
         try:
             expression = readuntil(self.request, b"\n").decode()
@@ -29,26 +28,19 @@ class ThreadingTCPRequestHandler(BaseRequestHandler):
             self.request.sendall(b"\n\nTimed out.\n\n")
             return
 
-        for word in BLACKLIST:
-            if word in expression:
-                self.request.sendall(b"\nSome of your input is blacklisted.\n")
-                self.loop()
-                return
-
         try:
-            answer = eval(expression)
+            answer = eval(expression, {"__builtins__": None, "math": math})
             self.request.sendall(b"Answer: " + str(answer).encode() + b'\n\n')
             self.loop()
         except Exception as e:
-            #print(e)
-            self.request.sendall(b"\nSorry, an error occurred.\n")
-            self.loop()
+            print(e)
+            self.request.sendall(b"\nSorry, an error occurred.\n\n")
 
     def handle(self):
         """Handle incoming request"""
 
         self.request.sendall(
-            b"\n--- calculator V2 ---\nYou can insert some mathematical expressions here.\n"
+            b"\n--- calculator V4 ---\nYou can insert some mathematical expressions here.\n\n"
         )
 
         self.loop()
@@ -56,3 +48,4 @@ class ThreadingTCPRequestHandler(BaseRequestHandler):
 
 if __name__ == "__main__":
     ThreadingTCPServer((HOST, PORT), ThreadingTCPRequestHandler).serve_forever()
+
